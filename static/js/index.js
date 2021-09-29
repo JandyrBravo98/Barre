@@ -69,18 +69,18 @@ function LED1_Off(){
   // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-	  if (message.payloadString=="Sensor 1 Encendido"){
+	  if (message.payloadString=="S1_Encendido"){
 	  document.getElementById("sensor1").innerHTML=message.payloadString;
 	  }
-	    if (message.payloadString=="Sensor 1 APAGADO"){
+	    if (message.payloadString=="S1_Apagado"){
 	  document.getElementById("sensor1").innerHTML=message.payloadString;
 	  }
 	  
-	  if (message.payloadString=="Sensor 2 Encendido"){
+	  if (message.payloadString=="S2_Encendido"){
 	  document.getElementById("sensor2").innerHTML=message.payloadString;
 	  }
 	  
-	  if (message.payloadString=="Sensor 2 APAGADO"){
+	  if (message.payloadString=="S2_Apagado"){
 	  document.getElementById("sensor2").innerHTML=message.payloadString;
 	  }
   }
