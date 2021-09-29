@@ -5,7 +5,7 @@ function LED1_On() {
 	console.log("H1");
 	//document.getElementById("sensor").innerHTML="led on";
 	message = new Paho.MQTT.Message("sensor1");
-    	message.destinationName = "jabravo.fie@unach.edu.ec/test1";
+    	message.destinationName = "jabravo.fie@unach.edu.ec/test";
     	client.send(message);
   
 }
@@ -13,7 +13,7 @@ function LED1_Off(){
 	//alert("led off");
 	console.log("H2");
 	message = new Paho.MQTT.Message("sensor2");
-    	message.destinationName = "jabravo.fie@unach.edu.ec/test1";
+    	message.destinationName = "jabravo.fie@unach.edu.ec/test";
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
@@ -47,7 +47,7 @@ function LED1_Off(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("jabravo.fie@unach.edu.ec/test1");
+    client.subscribe("jabravo.fie@unach.edu.ec/test");
     message = new Paho.MQTT.Message("hola desde la web");
     message.destinationName = "jabravo.fie@unach.edu.ec/test";
     client.send(message);
